@@ -48,7 +48,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = ArgumentParser(description='Utility script to (load and) train a model.')
-    parser.add_argument('-m', '--model', help='The state_dict of a trained model (use this for transfer learning)',
+    parser.add_argument('-m', '--model', help='The state_dict of a trained model. This is used for training more epoches.',
                         type=str)
-    parser.add_argument('-e', '--epoch', help='The epoch index to start with', default=0, type=int)
+    parser.add_argument('-e', '--epoch', help='The epoch index to start with. It will continue training for (100-index) epoches.', default=0, type=int)
     main(parser.parse_args())
